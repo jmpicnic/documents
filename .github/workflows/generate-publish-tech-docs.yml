@@ -1,0 +1,49 @@
+---
+name: commerce-domain-docs-publish
+on: 
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+   generate-domain-docs:
+    name: generate docs
+    runs-on: default
+    strategy:
+        matrix:
+            entity: [domain, merchandising, sales-transaction]
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+        - name: Diagnostic
+          shell: bash
+          env:
+            CONTENT_ROOT: ${{ matrix.entity }}/docs/contents
+          run: |
+            echo "===> MATRIX: ${{ matrix.entity }}"
+            echo "===> CONTENT_ROOT: $CONTENT_ROOT"
+            echo "===> AT: $PWD"
+            echo "===> with contents"
+            ls -l
+            echo "===> Requirements file"
+            realpath ${{ matrix.entity }}/docs/../../requirements.txt
+            cat ${{ matrix.entity }}/docs/../../requirements.txt
+        - name: Generate Docs
+          id: gen-docs
+          env:
+            CONTENT_ROOT: ${{ matrix.entity }}/docs/contents
+          uses: flexport/action-build-mkdocs@v1
+          with:
+            docs-dir: ${{ matrix.entity }}/docs
+            site-target-dir: site
+            requirements-file-name: ../../requirements.txt
+            mkdocs-file-name: mkdocs.yml
+            for-techdocs: Yes
+        - name: Publish Docs
+          uses: flexport/action-publish-techdocs@v1
+          id: publish-docs
+          with:
+            site-dir: ${{ steps.gen-docs.outputs.generated-site }}
+            catalog-info-file: "${{ matrix.entity }}/catalog-info.yaml"
+            techdocs_environment: "prod"
