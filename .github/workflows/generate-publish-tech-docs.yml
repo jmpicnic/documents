@@ -1,5 +1,5 @@
 ---
-name: commerce-domain-docs-publish
+name: docs-publish
 on: 
     push:
         branches:
