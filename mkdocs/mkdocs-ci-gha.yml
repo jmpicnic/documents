@@ -2,10 +2,12 @@
 ---
 INHERIT: mkdocs.yml
 markdown_extensions:
-  - plantuml_markdown:
-      plantuml_cmd: 'java -Djava.awt.headless=true -jar plantuml.jar'
-      #  backstage seems to block svg, so set to png for Backstage
-      format: png
-  - pymdownx.arithmatex:
-      generic: true
-      preview: true
+  # Need one to make Inherit work O.K.
+  mdx_truly_sane_lists:
+  plantuml_markdown:
+    plantuml_cmd: 'java -Djava.awt.headless=true -jar plantuml.jar'
+    # backstage seems to block svg, so set to png for Backstage
+    format: png
+#  pymdownx.arithmatex:
+#      generic: true
+#      preview: true

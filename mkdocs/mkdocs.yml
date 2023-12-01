@@ -54,38 +54,38 @@ theme:
 # 1. :man_raising_hand: I'm a code annotation!!
 
 markdown_extensions:
-  - abbr
-  - attr_list
-  - footnotes
-  - tables
-  - def_list
-  - admonition
-  - toc
+  abbr:
+  attr_list:
+  footnotes:
+  tables:
+  def_list:
+  admonition:
+  toc:
 #  - markdown_inline_graphviz
-  - plantuml_markdown:
+  plantuml_markdown:
       # base_dir: 'domain:merchandising:sales-transaction'
       # plantuml_cmd: 'java -Djava.awt.headless=true -Dplantuml.include.path="domain:merchandising:sales-transaction" -jar plantuml.jar'
       #  backstage seems to block svg, so set to png for Backstage
       format: png
   # https://pypi.org/project/mdx-truly-sane-lists/
-  - mdx_truly_sane_lists
+  mdx_truly_sane_lists:
   # See https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
-  - pymdownx.arithmatex:
-      generic: true
-      preview: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      check_paths: true
+  pymdownx.arithmatex:
+    generic: true
+    preview: true
+  pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+  pymdownx.inlinehilite:
+  pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+  pymdownx.smartsymbols:
+  pymdownx.snippets:
+    check_paths: true
 
 extra_javascript:
   - javascripts/mathjax.js
