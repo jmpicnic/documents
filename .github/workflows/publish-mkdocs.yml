@@ -39,7 +39,9 @@ jobs:
             echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2    
+        uses: actions/upload-pages-artifact@v2 
+        with:
+          path: site   
   deploy:
     # Add a dependency to the upload job
     needs: mkdocs-build
