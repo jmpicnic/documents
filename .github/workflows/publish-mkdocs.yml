@@ -23,6 +23,8 @@ jobs:
         with:
           distribution: corretto
           java-version: '17'
+      - name: Check dot installation
+        run: dot -C
       - name: get the latest plantuml
         run: |
           wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.12/plantuml-1.2023.12.jar
@@ -37,8 +39,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: run mkdocs
         run: |
-          echo "$PATH"
-          export PATH=".:$PATH"
           mkdocs build -s -f mkdocs/mkdocs-ci-gha.yml
       - name: Fix permissions
         run: |

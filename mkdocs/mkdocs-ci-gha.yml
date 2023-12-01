@@ -5,4 +5,4 @@ markdown_extensions:
   - plantuml_markdown:
       plantuml_cmd: 'java -Djava.awt.headless=true -jar plantuml.jar'
       #  backstage seems to block svg, so set to png for Backstage
-      format: svg
+      format: png

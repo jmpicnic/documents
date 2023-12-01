@@ -4,7 +4,7 @@ Use the navigation on the left to access the documents for the different entitie
 
 ## Plant Uml
 
-```plantuml
+```text
 @startuml
 title
 A sample PlantUML diagram
@@ -17,8 +17,12 @@ A --> B
 @enduml
 ```
 
+## Math
+
 With some math
 
 $y = a x + b$
 
-\[y^2 = a x + b\]
+$$
+y^2 = a x + b
+$$

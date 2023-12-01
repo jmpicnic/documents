@@ -69,10 +69,6 @@ markdown_extensions:
       format: png
   # https://pypi.org/project/mdx-truly-sane-lists/
   - mdx_truly_sane_lists
-  # https://github.com/crisluengo/mdx_math_svg
-#  - mdx_math_svg:
-#      inline_class: math
-#      display_class: math
   # See https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
   - pymdownx.arithmatex:
       generic: true
