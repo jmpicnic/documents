@@ -4,7 +4,7 @@ Use the navigation on the left to access the documents for the different entitie
 
 ## Plant Uml
 
-```plantuml
+```text
 @startuml
 title
 A sample PlantUML diagram
