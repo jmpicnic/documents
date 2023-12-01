@@ -44,7 +44,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: run mkdocs
         run: |
-          export PATH="./$PATH"
+          echo "$PATH"
+          export PATH=".:$PATH"
           mkdocs build -s -f mkdocs/mkdocs.yml
       - name: Fix permissions
         run: |
