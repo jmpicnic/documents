@@ -1,10 +1,10 @@
 ---
-  name: docs-publish
-  on: 
-      push:
-          branches:
-              - main
-      workflow_dispatch:
+name: docs-publish
+on: 
+  workflow_dispatch:
+# push:
+#   branches:
+#     - main
 
 jobs:
    generate-domain-docs:
