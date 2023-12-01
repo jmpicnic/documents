@@ -16,7 +16,7 @@ jobs:
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           version: 1.0
-          packages: graphviz texlive pandoc ghostscript
+          packages: graphviz texlive pandoc ghostscript tree
           # execute_install_scripts: true
       - name: Install Java
         uses: actions/setup-java@v3
@@ -55,6 +55,8 @@ jobs:
       - name: run mkdocs
         run: |
           mkdocs build -s -f mkdocs/mkdocs-ci-gha.yml
+      - name: Diagnose produced site
+        run: tree mkdocs/site
       - name: Fix permissions
         run: |
           chmod -c -R +rX "site/" | while read line; do
