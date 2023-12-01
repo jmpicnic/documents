@@ -40,6 +40,17 @@ jobs:
           cache-dependency-path: requirements.txt
       - name: Install Python packages
         run: pip install -r requirements.txt
+      - name: Check Versions
+        run: |
+          lsb_release -a
+          python --version
+          java --version
+          mkdocs --version
+          pandoc --version
+          gs --version
+          latex --version
+          dot --version
+          java -Djava.awt.headless=true -jar plantuml.jar -version
       - name: run mkdocs
         run: |
           mkdocs build -s -f mkdocs/mkdocs-ci-gha.yml
