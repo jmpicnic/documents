@@ -9,8 +9,6 @@ jobs:
   mkdocs-build:
     name: Build mkdocs
     runs-on: ubuntu-latest
-    env:
-      PATH: ".:$PATH"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -45,7 +43,9 @@ jobs:
       - name: Install Python packages
         run: pip install -r requirements.txt
       - name: run mkdocs
-        run: mkdocs build -s -f mkdocs/mkdocs.yml
+        run: |
+          export PATH="./$PATH"
+          mkdocs build -s -f mkdocs/mkdocs.yml
       - name: Fix permissions
         run: |
           chmod -c -R +rX "site/" | while read line; do
