@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Documentation","text":"<p>Use the navigation on the left to access the documents for the different entities.</p> <p>With some math</p> <p>\\(y = a x + b\\)</p> \\[y^2 = a x + b\\]"}]}
