@@ -16,7 +16,7 @@ jobs:
         uses: awalsh128/cache-apt-pkgs-action@latest
         with:
           version: 1.0
-          packages: graphviz texlive pandoc ghostscript
+          packages: graphviz=9.0.0 texlive pandoc ghostscript
           # execute_install_scripts: true
       - name: Install Java
         uses: actions/setup-java@v3
