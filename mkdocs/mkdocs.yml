@@ -63,7 +63,7 @@ markdown_extensions:
   - toc
 #  - markdown_inline_graphviz
   - plantuml_markdown:
-      base_dir: 'domain:merchandising:sales-transaction'
+      # base_dir: 'domain:merchandising:sales-transaction'
       # plantuml_cmd: 'java -Djava.awt.headless=true -Dplantuml.include.path="domain:merchandising:sales-transaction" -jar plantuml.jar'
       #  backstage seems to block svg, so set to png for Backstage
       format: png
