@@ -72,7 +72,7 @@ markdown_extensions:
   # See https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
   pymdownx.arithmatex:
     generic: true
-    preview: false
+    preview: true
   pymdownx.highlight:
     anchor_linenums: true
     line_spans: __span
