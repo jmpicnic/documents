@@ -2,9 +2,8 @@
 
 Use the navigation on the left to access the documents for the different entities.
 
-```plantuml
-@startuml (id=TST)
-class A
+With some math
 
-@enduml
-```
+$y = a x + b$
+
+\[y^2 = a x + b\]
