@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: corretto
-          java-version: '17'
+          java-version: '21'
       - name: get the latest plantuml
         run: |
           wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.12/plantuml-1.2023.12.jar
@@ -47,6 +47,7 @@ jobs:
           java --version
           mkdocs --version
           pandoc --version
+          echo -n "ghostscript: "
           gs --version
           latex --version
           dot -V
