@@ -23,12 +23,15 @@ jobs:
         with:
           distribution: corretto
           java-version: '17'
-      - name: Check dot installation
-        run: dot -C
       - name: get the latest plantuml
         run: |
           wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.12/plantuml-1.2023.12.jar
           mv plantuml-1.2023.12.jar plantuml.jar
+      - name: Check dot installation
+        run: |
+          which dot
+          java -Djava.awt.headless=true -jar plantuml.jar -testdot
+          sudo dot -c
       - name: Install Python
         uses: actions/setup-python@v4
         with:
