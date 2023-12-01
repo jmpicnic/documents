@@ -19,6 +19,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: mkdocs/mkdocs.yml
-          EXTRA_PACKAGES: graphviz plantuml texlive-latex-extra
+          EXTRA_PACKAGES: graphviz plantuml texlive-full
           # GITHUB_DOMAIN: github.myenterprise.com
           REQUIREMENTS: requirements.txt
