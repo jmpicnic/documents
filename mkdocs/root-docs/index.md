@@ -31,8 +31,22 @@ Inlining second one ($ sign): $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$ with trailing t
 
 Some stand alone formula:
 
+* With double $
+
 $$
-y^2 = a x + b
+  y^2 = a x + b
 $$
+
+* With brackets
+
+\[
+  y^2 = a x + b
+\]
+
+* With begin/end
+
+\begin{align}
+  y^2 = a x + b
+\end{align}
 
 Should be rendered above this line.
