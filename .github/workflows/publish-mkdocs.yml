@@ -49,7 +49,7 @@ jobs:
           pandoc --version
           gs --version
           latex --version
-          dot --version
+          dot -V
           java -Djava.awt.headless=true -jar plantuml.jar -version
       - name: run mkdocs
         run: |
