@@ -27,8 +27,12 @@ Inlining second one ($ sign): $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$ with trailing t
 
 * Inlining third one (paren): \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\) with trailing text
 
-## Stand alone.
+## Stand alone
+
+Some stand alone formula:
 
 $$
 y^2 = a x + b
 $$
+
+Should be rendered above this line.
