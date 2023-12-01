@@ -21,11 +21,11 @@ A --> B
 
 With some math
 
-Inlining one simple expression ($ sign): $y = a x + b$
+Inlining one simple expression ($ sign): $y = a x + b$ with trailing text
 
-Inlining second one ($ sign): $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
+Inlining second one ($ sign): $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$ with trailing text
 
-* Inlining third one (paren): \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\).
+* Inlining third one (paren): \(p(x|y) = \frac{p(y|x)p(x)}{p(y)}\) with trailing text
 
 ## Stand alone.
 
