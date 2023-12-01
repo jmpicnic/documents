@@ -1,5 +1,5 @@
 ---
-name: docs-publish
+name: mkdocs-publish
 on: 
   push:
     branches:
