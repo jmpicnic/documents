@@ -27,13 +27,6 @@ jobs:
         run: |
           wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.12/plantuml-1.2023.12.jar
           mv plantuml-1.2023.12.jar plantuml.jar
-          echo '#!/bin/bash' > plantuml
-          echo 'echo "Local Plantuml"' >> plantuml
-          echo 'if [[ "$*" != *"-gui"* ]]; then' >> plantuml
-          echo '  VMARGS="-Djava.awt.headless=true"' >> plantuml
-          echo "fi" >> plantuml
-          echo 'GRAPHVIZ_DOT="dot" exec "java" $VMARGS -jar ./plantuml.jar "$@"' >> plantuml
-          chmod ugo+x plantuml
       - name: Install Python
         uses: actions/setup-python@v4
         with:
@@ -46,7 +39,7 @@ jobs:
         run: |
           echo "$PATH"
           export PATH=".:$PATH"
-          mkdocs build -s -f mkdocs/mkdocs.yml
+          mkdocs build -s -f mkdocs/mkdocs-ci-gha.yml
       - name: Fix permissions
         run: |
           chmod -c -R +rX "site/" | while read line; do
