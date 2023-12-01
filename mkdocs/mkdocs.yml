@@ -5,7 +5,7 @@
 # Backstage Docs: https://backstage.io/docs/features/techdocs/creating-and-publishing#enable-documentation-for-an-already-existing-entity
 # https://www.mkdocs.org/user-guide/configuration/#site_name
 
-site_name: 'jmpicnic documentation'
+site_name: 'Salduba Documentation'
 site_description: Documentation using mkdocs
 repo_url: 'https://github.com/jmpicnic/documents'
 repo_name: 'GitHub'
@@ -25,7 +25,7 @@ extra:
 
 # https://www.mkdocs.org/user-guide/configuration/#documentation-layout
 nav:
-  - ...
+  - Home: index.md
 #  - Index: index.md
 #  - Salduba:
 #      - Clients:
@@ -61,12 +61,13 @@ markdown_extensions:
   - def_list
   - admonition
   - toc
-  - markdown_inline_graphviz
+#  - markdown_inline_graphviz
   - plantuml_markdown:
       base_dir: 'domain:merchandising:sales-transaction'
-      plantuml_cmd: 'java -Djava.awt.headless=true -Dplantuml.include.path="domain:merchandising:sales-transaction" -jar plantuml.jar'
-      # prefer svg, but backstage seems to block that one.
+      # plantuml_cmd: 'java -Djava.awt.headless=true -Dplantuml.include.path="domain:merchandising:sales-transaction" -jar plantuml.jar'
+      #  backstage seems to block svg, so set to png for Backstage
       format: png
+  # https://pypi.org/project/mdx-truly-sane-lists/
   - mdx_truly_sane_lists
   # https://github.com/crisluengo/mdx_math_svg
   - mdx_math_svg:
