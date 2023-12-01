@@ -30,8 +30,8 @@ jobs:
       - name: Check dot installation
         run: |
           which dot
-          java -Djava.awt.headless=true -jar plantuml.jar -testdot
           sudo dot -c
+          java -Djava.awt.headless=true -jar plantuml.jar -testdot
       - name: Install Python
         uses: actions/setup-python@v4
         with:
