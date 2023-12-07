@@ -60,7 +60,7 @@ jobs:
         with:
           docs-dir: mkdocs
           site-target-dir: site
-          requirements-file-name: requirements.txt
+          requirements-file-name: ../requirements.txt
           mkdocs-file-name: mkdocs-ci-gha.yml
           for-techdocs: False
       - name: Upload Pages artifact
